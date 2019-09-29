@@ -1,0 +1,42 @@
+/* ta02.css */
+
+.div-first {
+	background-color: #00BCD4;
+	font-size: 2em;
+}
+
+.div-later {
+	font-size: 0.7em;
+}
+
+#div2 {
+	background-color: #4DD0E1;
+}
+
+#div3 {
+	background-color: #B2EBF2;
+}
+
+.hover-bold:hover {
+	font-weight: bold;
+}
+
+div.bigHero{
+	max-height: 300px;
+    overflow: hidden;
+}
+
+img.hero{
+	width: 100%;;
+}
+
+button{
+	background-color: black;
+	color: #ffffff;
+	-webkit-transition: width 3000s; /* For Safari 3.1 to 6.0 */
+	transition: width 3000s;
+}
+button:hover{
+	background-color: #00BCD4;
+	padding: 10px;
+}

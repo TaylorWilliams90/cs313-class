@@ -13,13 +13,19 @@
         <script src="js/jquery-3.4.1.min.js"></script>
         <title>Click Me</title>
     </head>
-    <div class="col-lg-4">
+    <div class="div-first col-lg-4">
+        Div 1
+    </div>
+    <div class="div-later col-lg-4">
+        Div 2
+    </div>
+    <div class="div-later col-lg-4">
+        Div 3
+    </div>
+    <div class="col-lg-12">
+        <button onclick="clickMe();">Click me!</button><br/>
+        <label for="txtColor">Color:</label> <input type="text" id="txtColor" placeholder="#cccccc"><br />
 
-    </div>
-    <div class="col-lg-4">
-        <button class="btn btn-success clickme with-color" id="myBtn">Click Me</button>
-    </div>
-    <div class="col-lg-4">
-        
+		<button onclick="changeColor();">Change color</button>
     </div>
 </html>
