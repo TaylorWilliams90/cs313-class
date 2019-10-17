@@ -15,21 +15,23 @@
     <link href="pricing.css" rel="stylesheet">
   </head>
 <body class="container">
-<form action="insert.php" method="post">
 
-    <label for="book">BOOK</label>
-    <input type="text" name="book" id="book">
+<?php
+$statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
+$statement->execute();
+// Go through each result
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	// The variable "row" now holds the complete record for that
+	// row, and we can access the different values based on their
+	// name
+	$book = $row['book'];
+	$chapter = $row['chapter'];
+	$verse = $row['verse'];
+	$content = $row['content'];
+	echo "<p><strong>$book $chapter:$verse</strong> - \"$content\"<p>";
+}
+?>
 
-    <label for="chapter">CHAPTER</label>
-    <input type="text" name="chapter" id="chapter">
-
-    <label for="verse">VERSE</label>
-    <input type="text" name="verse" id="verse">
-
-    <label for="content">CONTENT</label>
-    <input type="text" name="content" id="content">
-
-    <input type="submit" value="Submit">
-</form>
 </body>
 </html>
