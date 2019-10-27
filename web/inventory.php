@@ -5,7 +5,7 @@ $db = get_db();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Inventory | Home Page </title>
+        <title>Inventory</title>
 
         <meta charset="utf-8"/>
         
@@ -26,8 +26,18 @@ $db = get_db();
       </div>
 
       <div class="container">
-        <h1>Home Page</h1>
-        <p>This is a home page of the inventory web application that i am going to make. thank you for coming by.</p>
+        <h1>Inventory Page</h1>
+        <p>Add new cars here:</p>
+        <form action="addCar.php" method="POST" >
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model">
+            <label for="vin">VIN:</label>
+            <input type="text" id="vin" name="vin">
+            <input type="submit" value="Add to Database" />
+        </form>
+        <p>There are all of your cars:</p>
 
            <?php $statement = $db->prepare("SELECT id, make, model, vin FROM car");
             $statement->execute();
